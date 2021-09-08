@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Order Form</title>
+    </head>
+    <body>
+        <h1 align="Center">Magazine Subscription</h1>
+
+        <form>
+            <fieldset style="width:350px"><legend><strong>Contact Information</strong></legend>
+                <label>First Name: <input type="text" size="12" maxlength="12" placeholder="John" tabindex="1" autofocus/></label></br>
+                <label>Last Name: <input type="text" size="25" maxlength="25" placeholder="Doe" tabindex="2"/></label></br>
+                <label>Email:<sup>*</sup> <input type="email" size="40" maxlength="25" placeholder="johndoe@johndoe.com" tabindex="3" required/></label></br>
+                <label>Telephone:<sup>*</sup> <input type="tel" size="11" maxlength="13" placeholder="123-456-7890" tabindex="4" required/></label> 
+                    <select>
+                        <option>Home</option>
+                        <option>Mobile</option>
+                        <option>Other</option>
+                    </select></br>
+                <label>Shipping Address:</br> <textarea cols="20" rows="5" placeholder="Street                                  City, State                       Zipcode" tabindex="5"></textarea></label>
+                <p><sup><sup>*</sup>Required</sup></p>
+            </fieldset>
+        </form>
+        
+
+        <h4>Subscription Length</h4>
+        <form>
+            <label><input type="radio" name="subscription" value="Monthly"/> Monthly</label></br>
+            <label><input type="radio" name="subscription" checked="checked" value="Yearly"/> Yearly</label>
+        </form></br>
+
+        <p>Sign up for email updates.</p>
+        <form><label><input type="checkbox" name="choice"/> Email Updates</label></form></br>
+
+        <h5>Terms of Service</h5>
+        <p>Agree to the TOS to continue.</p>
+        <form><label><input type="checkbox" name="tos"/> Terms of Service</label></form></br>
+
+        <form><input type="button" value="Submit"/></form>
+
+    </body>
+</html>
