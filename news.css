@@ -1,0 +1,40 @@
+/* Global page properties 
+constraining content and creating border */
+#all {
+    width: 900px;
+    border: 2px solid black;
+}
+
+/* Adjusts image size and location */
+img {
+    float: right;
+    padding: 0 0 12px 12px;
+    width: 300px;
+}
+
+/* Text location */
+p {
+    float: left;
+}
+
+/* Controls presentation of links */
+a:link {
+    color: darkblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+a:visited {
+    color:blueviolet;
+}
+a:active {
+    color:blueviolet;
+}
+a:focus {
+    color: lightblue;
+    text-decoration: underline;
+}
