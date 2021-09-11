@@ -1,0 +1,87 @@
+fieldset {
+    margin: 1em auto;
+    border: 1px solid black;
+    width: 50%;
+    padding: .75em;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / .5);
+}
+legend {
+    font-size: 1.5em;
+}
+input {
+    padding: .35em;
+    margin: .5em;
+    font-size: large;
+}
+input:focus {
+    box-shadow: inset 1px 1px 5px rgb(0 0 35 / .3);
+    outline: none;
+}
+#fname {
+    padding: .35em;
+    margin: .5em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    border-top-right-radius: white;
+}
+#lname {
+    padding: .35em;
+    margin: .5em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+#email {
+    border: 1px solid black;
+    text-indent: .2em;
+}
+#telephone {
+    border: 1px solid black;
+}
+input [type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    vertical-align: center;
+}
+.buttontext {
+    font-size: 1em;
+    vertical-align: center;
+}
+#buttoncontainer {
+    padding: 1em;
+}
+#enter {
+    border-radius: 6px;
+    background: gold;
+    padding: 3px 8px 3px 8px;
+    font-weight: bold;
+    font-size: .75em;
+}
+#enter:active {
+    background: black;
+    color: gold;
+}
+select {
+    background-color: gold;
+    font-size: 1em;
+    color: navy;
+}
+h1 {
+    color: transparent;
+    background-color: gold;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    font-size: 4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 4px 2px rgb(255 255 255 / .6);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+body {
+    font-size: 1.5em;
+}
