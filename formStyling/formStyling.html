@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Styling</title>
+
+        <meta charset="uft-8">
+
+        <link rel="stylesheet" href="formStyling.css">
+    </head>
+
+    <body>
+        <h1>COMPANY NAME</h1>
+        <form>
+            <fieldset>
+                <legend>Subscription</legend>   
+                    <label for="fname">First Name: <input type="text" id="fname" size="20" maxlength="20" placeholder="John" tabindex="1" autofocus/></label></br>
+                    <label for="lname">Last Name: <input type="text" id="lname" size="20" maxlength="20" placeholder="Doe" tabindex="2"/></label></br>
+                    <label for="email">Email: <input type="email" id="email" size="25" maxlength="30" placeholder="johndoe@uwm.edu" tabindex="3"/></label></br>
+                    <label for="telephone">Telephone: <input type="tel" id="telephone" size="15" maxlength="12" placeholder="123-456-7890" tabindex="4"/></label>
+                        <select>
+                            <option>Home</option>
+                            <option>Mobile</option>
+                            <option>Other</option>
+                        </select></br>
+                    <div id="buttoncontainer">
+                        <input type="checkbox" name="subscription" checked="checked" value="updates"/><label><span class="buttontext">Sign-up for email updates</span></label></br>
+                        <label><input type="checkbox" name="subscription" value="TOS"/><span class="buttontext">Agree to TOS</span></label></br>
+                    </div>
+                    <input type="button" id="enter" value="Enter"/>
+            </fieldset>
+        </form>
+    </body>
+</html>
