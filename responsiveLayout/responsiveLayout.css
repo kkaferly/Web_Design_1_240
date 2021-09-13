@@ -1,0 +1,211 @@
+body {
+    background: lightslategray;
+    background-image: url('../images/bookshelves.jpg');
+}
+#all {
+    width: 80%;
+    height: auto;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+#side a:link {
+    color: #1446A0;
+    text-decoration: none;
+}
+#side a:visited {
+    color: purple;
+    text-decoration: none;
+}
+#side a:hover {
+    color: #1446A0;
+    text-decoration: underline;
+}
+#head {
+    height: 150px;
+    font-size: 1.25em;
+    border-bottom: 1px solid black;
+    padding: .05em;
+    text-align: center;
+    background: #3C3C3B;
+}
+#head a {
+    border: 1px solid black;
+    background: #F5D547;
+    padding: .4em;
+    color: lightgrey;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .6);
+}
+#head a:link {
+    color: #1446A0;
+    text-decoration: none;
+}
+#head a:visited {
+    color: purple;
+    text-decoration: none;
+}
+#head a:hover {
+    color: #1446A0;
+    background: #EBEBD3;
+    text-decoration: underline;
+}
+#head a:active {
+    color: #1446A0;
+    text-decoration: underline;
+}
+#head a:focus {
+    color: #1446A0;
+    text-decoration: underline;
+}
+#side {
+    width: 20%;
+    height: auto;
+    background: #EBEBD3;
+    float: left;
+    box-sizing: border-box;
+    background-image: linear-Gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    padding: .5em;
+    text-align: center;
+    border-left: 1px solid lightslategray;
+}
+#main {
+    width: 60%;
+    height: auto;
+    background: #F5D547;
+    background-image: linear-Gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    float: left;
+    padding: .5em 1.25em .5em 1.25em;
+    text-align: justify;
+    box-sizing: border-box;
+    border-left: 1px solid lightslategray;
+    border-right: 1px solid lightslategray;
+}
+#right {
+    width: 20%;
+    height: auto;
+    background: lightyellow;
+    float: right;
+    border-right: 1px solid lightslategray;
+    box-sizing: border-box;
+    background-image: linear-Gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    text-align: center;
+    padding: .25em;
+}
+#right img {
+    padding: .5em .5em .5em .5em;
+    width: 80%;
+    box-shadow: 2px 5px 8px rgb(0 0 0 / 1);
+    background-color: whitesmoke;
+}
+#right a img:hover {
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, .4);
+}
+#foot {
+    clear: both;
+    height: 80px;
+    background: white;
+    border-top: 1px solid white;
+    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, .4);
+    text-align: center;
+}
+#foot a:link {
+    color: lightslategray;
+    text-decoration: none;
+}
+#foot a:visited {
+    color: purple;
+    text-decoration: none;
+}
+#foot a:hover {
+    color: #1446A0;
+    text-decoration: underline;
+}
+#foot a:active {
+    color: #1446A0;
+    text-decoration: underline;
+}
+#foot a:focus {
+    color: #1446A0;
+    text-decoration: underline;
+}
+h1 {
+    font-size: 3.25em;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: .08em 0 .3em 0;
+    color: #DB3069;
+}
+h3 {
+    color: #DB3069;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 700px) {
+    body {
+        margin: 0;
+    }
+    #all {
+        width: 90%;
+    }
+    #main {
+        width: 80%;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        float: right;
+        padding-top: .5em;
+    }
+    #right {
+        clear: both;
+        width: 100%;
+        border: none;
+    }
+    #foot {
+        height: auto;
+        padding-bottom: .5em;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 449px) {
+    #all {
+        width: 100%;
+        height: auto;
+    }
+    #head {
+        height: auto;
+        font-size: 1.1em;
+        padding: .1em;
+        padding-bottom: .25em;
+    }
+    #right {
+        width: 100%;
+        height: auto;
+        float: none;
+        border:none;
+        border-bottom: 1px solid black;
+    }
+    #main {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: .5em;
+        padding-top: 1em;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    #side {
+        width: 100%;
+        height: auto;
+        border: none;
+        border-top: 1px solid black;
+    }
+    #foot {
+        height: auto;
+        padding-bottom: .5em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #head a {
+        padding: .1em;
+        font-size: .9em;
+    }
+}
