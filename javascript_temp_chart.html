@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Assessment 23</title>
+		
+		<style type="text/css">
+			#temps {
+				margin: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+        <canvas width="800" height="600" id="temps">
+			Browser doesn't support HTML canvas
+		</canvas>
+
+        <script>
+            //Title
+            var title = document.getElementById('temps').getContext('2d');
+
+            title.font = "28px Times New Roman";
+            title.fillText('Milwaukee, WI Average Monthly Temperatures (°F)', 90, 25);
+
+
+            //X-axis line
+            var x = document.getElementById('temps').getContext('2d');
+
+            x.beginPath();
+            x.lineWidth = 3;
+            x.moveTo(40, 510);
+                x.lineTo(40, 527);
+                x.lineTo(740, 527);
+                x.stroke();
+
+
+            //Y-axis line
+            var y = document.getElementById('temps').getContext('2d');
+
+            y.beginPath();
+            y.moveTo(40, 527);
+                y.lineTo(40, 527);
+                y.lineTo(40, 40);
+                y.stroke();
+
+
+            //Month Labels
+            var months = document.getElementById('temps').getContext('2d');
+
+            months.font = "20px Helvetica";
+            months.fillText(' Jan | Feb | March | April | May | June | July | August | Sept | Oct | Nov | Dec', 45, 555);
+
+
+            //Temp Labels 
+            var temp1 = document.getElementById('temps').getContext('2d');
+
+            temp1.font = '18px Helvetica';
+            temp1.fillText('80 - ', 10, 50);
+            temp1.fillText('75 - ', 10, 80);
+            temp1.fillText('70 - ', 10, 110);
+            temp1.fillText('65 - ', 10, 140);
+            temp1.fillText('60 - ', 10, 170);
+            temp1.fillText('55 - ', 10, 200);
+            temp1.fillText('50 - ', 10, 230);
+            temp1.fillText('45 - ', 10, 260);
+            temp1.fillText('40 - ', 10, 290);
+            temp1.fillText('35 - ', 10, 320);
+            temp1.fillText('30 - ', 10, 350);
+            temp1.fillText('25 - ', 10, 380);
+            temp1.fillText('20 - ', 10, 410);
+            temp1.fillText('15 - ', 10, 440);
+            temp1.fillText('10 - ', 10, 470);
+            temp1.fillText(' 5  - ', 10, 500);
+            temp1.fillText(' 0  - ', 10, 530);
+
+
+            //High temps line
+            var high = document.getElementById('temps').getContext('2d');
+
+            high.beginPath();
+            high.lineWidth = 2;
+            high.strokeStyle = '#990000';
+            high.moveTo(66, 350); //January
+                high.lineTo(110, 340); //February
+                high.lineTo(170, 302); //March
+                high.lineTo(230, 214); //April
+                high.lineTo(290, 148); //May
+                high.lineTo(350, 86); //June
+                high.lineTo(405, 54); //July
+                high.lineTo(470, 57); //August
+                high.lineTo(540, 107); //September
+                high.lineTo(590, 172); //October
+                high.lineTo(640, 232); //November
+                high.lineTo(690, 335); //December
+                high.stroke();
+
+
+            //Average High Temps
+            var highs = document.getElementById('temps').getContext('2d');
+
+            highs.fillRect(65, 345, 8, 8); //January
+            highs.fillRect(110, 335, 8, 8); //February
+            highs.fillRect(170, 295, 8, 8); //March
+            highs.fillRect(230, 205, 8, 8); //April
+            highs.fillRect(290, 140, 8, 8); //May
+            highs.fillRect(350, 80, 8, 8); //June
+            highs.fillRect(405, 50, 8, 8); //July
+            highs.fillRect(470, 55, 8, 8); //August
+            highs.fillRect(540, 107, 8, 8); //September
+            highs.fillRect(590, 172, 8, 8); //October
+            highs.fillRect(640, 235, 8, 8); //November
+            highs.fillRect(690, 335, 8, 8); //December
+
+
+            //Low temps line
+            var low = document.getElementById('temps').getContext('2d');
+
+            low.beginPath();
+            low.lineWidth = 2;
+            low.strokeStyle = '#000099';
+            low.moveTo(65, 444); //January
+                low.lineTo(110, 420); //February
+                low.lineTo(170, 372); //March
+                low.lineTo(230, 317); //April
+                low.lineTo(290, 247); //May
+                low.lineTo(350, 197); //June
+                low.lineTo(405, 149); //July
+                low.lineTo(470, 152); //August
+                low.lineTo(540, 200); //September
+                low.lineTo(590, 274); //October
+                low.lineTo(640, 350); //November
+                low.lineTo(690, 410); //December
+                low.stroke();
+
+
+            //Average Low Temps
+            var lows = document.getElementById('temps').getContext('2d');
+
+            lows.fillRect(65, 438, 8, 8); //January
+            lows.fillRect(110, 412, 8, 8); //February
+            lows.fillRect(170, 365, 8, 8); //March
+            lows.fillRect(230, 310, 8, 8); //April
+            lows.fillRect(290, 240, 8, 8); //May
+            lows.fillRect(350, 190, 8, 8); //June
+            lows.fillRect(405, 145, 8, 8); //July
+            lows.fillRect(470, 150, 8, 8); //August
+            lows.fillRect(540, 200, 8, 8); //September
+            lows.fillRect(590, 275, 8, 8); //October
+            lows.fillRect(640, 350, 8, 8); //November
+            lows.fillRect(690, 410, 8, 8); //December
+
+        </script>
+    </body>
+</html>
