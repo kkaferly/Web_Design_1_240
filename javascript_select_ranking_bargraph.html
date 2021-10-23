@@ -1,0 +1,186 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>US City Rankings</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <style>
+        canvas{
+            border: 1px solid #000;
+        }
+        .values{
+            font-size:1.15em;
+        }
+        .values .purple{ 
+            color:purple;
+            font-weight:bold; 
+        }
+        .values .red{
+            color:red;
+            font-weight:bold; 
+        }
+        .values .blue{
+            color:blue;  
+            font-weight:bold;
+        }
+            
+        </style>
+    </head>
+    <body>
+        <h1>US City Rankings</h1> 
+
+        <p>Ranking cities in the United States by weather, cost of living, traffic, and things to do.</p>
+
+        <p>Choose a City: <select id="citySelect">
+                <option value="Chi">Chicago</option>
+                <option value="LA">Los Angeles</option>
+                <option value="LV">Las Vegas</option>
+                <option value="Hou">Houston</option>
+                <option value="NYC">New York City</option>
+            </select>
+        </p>
+
+        <canvas id="cityFinder" width="800" height="400">
+            Your Browser doesn't support the canvas tag
+        </canvas>
+
+        <p class="values">
+            <span class="purple">Purple</span> = poor | <span class="red">Red</span> = average | <span class="blue">Blue</span> = good
+        </p>
+
+        <script type="text/javascript">
+            var citydata = [
+                { name: "Chicago", weather: 450, col: 250, traffic: 150, ttd: 450 },
+                { name: "Los Angeles", weather: 475, col: 75, traffic: 100, ttd: 450 },
+                { name: "Las Vegas", weather: 235, col: 225, traffic: 350, ttd: 400 },
+                { name: "Houston", weather: 100, col: 275, traffic: 200, ttd: 350 },
+                { name: "New York City", weather: 430, col: 50, traffic: 100, ttd: 400 }
+            ];
+            var cityChart = null;
+            var cityCtx = null;
+
+            function drawChart(forWhichCity) {
+                drawBackground();
+                drawLabels(forWhichCity);
+                drawCityData(forWhichCity);
+            }
+
+            function drawBackground() {
+                cityCtx.save();
+
+                // fill in the chart background
+                cityCtx.fillStyle = "#B5B5B5";
+                cityCtx.fillRect(0,0,cityCtx.canvas.width,cityCtx.canvas.height);
+
+                // create the graph area
+                cityCtx.strokeStyle = "#333";
+                cityCtx.strokeRect(180, 100, 500, 260);
+                
+                //create graph data points
+                cityCtx.strokeStyle = '#000';
+                cityCtx.font = 5;
+                cityCtx.strokeText('0', 175,375);
+                cityCtx.strokeText('10', 225,375);
+                cityCtx.strokeText('20', 275,375);
+                cityCtx.strokeText('30', 325,375);
+                cityCtx.strokeText('40', 375,375);
+                cityCtx.strokeText('50', 425,375);
+                cityCtx.strokeText('60', 475,375);
+                cityCtx.strokeText('70', 525,375);
+                cityCtx.strokeText('80', 575,375);
+                cityCtx.strokeText('90', 625,375);
+                cityCtx.strokeText('100', 675,375);
+                
+
+                // draw the chart lines
+                cityCtx.strokeStyle = "#999";
+                for (var x = 180; x < 700; x += 50) {
+                    cityCtx.beginPath();
+                    cityCtx.moveTo(x, 100);
+                    cityCtx.lineTo(x, 360);
+                    cityCtx.stroke();
+                }
+                
+                cityCtx.restore();
+            }
+
+            function drawLabels(forWhichCity) {
+                cityCtx.save();
+
+                // draw city name
+                cityCtx.font = "1.75em Arial";
+                cityCtx.fillStyle = "#001F5C";
+                cityCtx.fillText("City Name: " + citydata[forWhichCity].name, 20, 35);
+
+                // draw the labels
+                cityCtx.font = "1.45em Arial";
+                cityCtx.fillStyle = "#334C7D";
+                cityCtx.fillText("Weather", 20, 155);
+                cityCtx.fillText("Cost of Living", 20, 210);
+                cityCtx.fillText("Traffic", 20, 265);
+                cityCtx.fillText("Things to do", 20, 320);
+
+                cityCtx.restore();
+            }
+
+            function drawCityData(forWhichCity) {
+                cityCtx.save();
+
+                cityCtx.strokeStyle = "#606060";
+                cityCtx.fillStyle = "#f7f700";
+                // draw weather
+                if (citydata[forWhichCity].weather <= 150)
+                    cityCtx.fillStyle = "purple";
+                else if (citydata[forWhichCity].weather > 150 && citydata[forWhichCity].weather < 300)
+                    cityCtx.fillStyle = "red";
+                else if (citydata[forWhichCity].weather >= 300)
+                    cityCtx.fillStyle = "blue";
+                cityCtx.fillRect(181, 130, citydata[forWhichCity].weather, 30);
+                cityCtx.strokeRect(181, 130, citydata[forWhichCity].weather, 30);
+                // draw cost of living
+                if (citydata[forWhichCity].col <= 150)
+                    cityCtx.fillStyle = "purple";
+                else if (citydata[forWhichCity].col > 150 && citydata[forWhichCity].col < 300)
+                    cityCtx.fillStyle = "red";
+                else if (citydata[forWhichCity].col >= 300)
+                    cityCtx.fillStyle = "blue";
+                cityCtx.fillRect(181, 185, citydata[forWhichCity].col, 30);
+                cityCtx.strokeRect(181, 185, citydata[forWhichCity].col, 30);
+                // draw traffic
+                if (citydata[forWhichCity].traffic <= 150)
+                    cityCtx.fillStyle = "purple";
+                else if (citydata[forWhichCity].traffic > 150 && citydata[forWhichCity].traffic < 300)
+                    cityCtx.fillStyle = "red";
+                else if (citydata[forWhichCity].traffic >= 300)
+                    cityCtx.fillStyle = "blue";
+                cityCtx.fillRect(181, 240, citydata[forWhichCity].traffic, 30);
+                cityCtx.strokeRect(181, 240, citydata[forWhichCity].traffic, 30);
+                // draw things to do
+                if (citydata[forWhichCity].ttd <= 150)
+                    cityCtx.fillStyle = "purple";
+                else if (citydata[forWhichCity].ttd > 150 && citydata[forWhichCity].ttd < 300)
+                    cityCtx.fillStyle = "red";
+                else if (citydata[forWhichCity].ttd >= 300)
+                    cityCtx.fillStyle = "blue";
+                cityCtx.fillRect(181, 295, citydata[forWhichCity].ttd, 30);
+                cityCtx.strokeRect(181, 295, citydata[forWhichCity].ttd, 30);
+
+                cityCtx.restore();
+            }
+
+            $("document").ready(function () {
+                cityChart = document.getElementById("cityFinder");
+                cityCtx = cityChart.getContext("2d");
+
+                $("#citySelect").bind("change", function () { drawChart(this.selectedIndex) });
+
+                drawChart(0);
+            });
+        </script>
+        <p style="font-size: 9px;">*Weather & Cost of Living data sourced from www.bestplaces.net</p>
+    </body>
+</html>
+
