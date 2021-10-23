@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Assessment 21</title>
+		
+		<style type="text/css">
+			canvas {
+				border: 2px solid #818181;
+				padding: .15em;
+				margin: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas width="650" height="250" id="canvas1">
+			Your browser doesn't support the canvas tag
+		</canvas>
+		<canvas width="650" height="250" id="canvas2">
+			Your browser doesn't support the canvas tag
+		</canvas>
+		<canvas width="650" height="250" id="canvas3">
+			Your browser doesn't support the canvas tag
+		</canvas>
+		
+		<script>
+			//Canvas 1
+			var one = document.getElementById('canvas1').getContext('2d');
+			var two = document.getElementById('canvas1').getContext('2d');
+			var three = document.getElementById('canvas1').getContext('2d');
+			
+			//Line 1
+			one.strokeStyle = '#FF3300';
+			one.lineWidth = 10;
+			one.lineCap = 'round';
+			
+			one.beginPath();
+			one.moveTo(40, 50);
+			one.lineTo(350, 50);
+			one.stroke();
+			
+			//Line 2
+			two.strokeStyle = '#00FF33';
+			two.lineWidth = 20;
+			two.lineCap = 'butt';
+			
+			two.beginPath();
+			two.moveTo(80, 100);
+			two.lineTo(450, 100);
+			two.stroke();
+			
+			//Line 3
+			three.strokeStyle = '3300FF';
+			three.lineWidth = 30;
+			three.lineCap = 'Square';
+			
+			three.beginPath();
+			three.moveTo(120, 150);
+			three.lineTo(550, 200);
+			three.stroke();
+			
+			
+			//Canvas 2
+			var text = document.getElementById('canvas2').getContext('2d');
+			
+			text.fillStyle = '#808080';
+			text.font = "41px Arial";
+			text.shadowBlur = 20;
+			text.shadowColor = '#303030';
+			
+			text.fillText('University of Wisconsin Milwaukee', 10, 150);
+			
+			text.strokeStyle = 'black';
+			text.strokeText('University of Wisconsin Milwaukee', 10, 150);
+			
+			
+			//Canvas 3
+			var ctx1 = document.getElementById('canvas3').getContext('2d');
+			var ctx2 = document.getElementById('canvas3').getContext('2d');
+			var ctx3 = document.getElementById('canvas3').getContext('2d');
+		
+			//Triangle
+			ctx1.beginPath();
+			ctx1.strokeStyle = '#FF0000';
+			ctx1.fillStyle = 'blue';
+			ctx1.lineWidth = 10;
+			ctx1.moveTo(350, 110);
+			ctx1.lineTo(210, 200);
+			ctx1.lineTo(215, 110);
+			ctx1.closePath();
+			ctx1.fill();
+			ctx1.stroke();
+			
+			//Rectangle
+			ctx2.beginPath();
+			ctx2.strokeStyle = '#00FF00';
+			ctx2.fillStyle = 'pink';
+			ctx2.lineWidth = 2;
+			ctx2.rect(300, 35, 250, 50);
+			ctx2.closePath();
+			ctx2.fill();
+			ctx2.stroke();
+			
+			//Arc
+			ctx3.beginPath();
+			ctx3.strokeStyle = 'black';
+			ctx3.lineWidth = 6;
+			ctx3.moveTo(20, 20);
+			ctx3.lineTo(100, 20);
+			ctx3.arcTo(150, 20, 150, 50, 60);
+			ctx3.lineTo(150, 120);
+			ctx3.stroke();
+			ctx3.closePath();
+			
+		</script>
+	</body>
+</html>

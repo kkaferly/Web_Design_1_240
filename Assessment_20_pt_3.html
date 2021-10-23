@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>File 3</title>
+		
+		<style type="text/css">
+			canvas {
+				border: 2px solid black;
+				padding: .15em;
+				margin: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas width="1300" height="1000" id="canvas">
+			Your browser doesn't support the canvas tag
+		</canvas>
+		
+		<img src="hardwood-tree.jpg" id="tree" hidden />
+		
+		<script>
+			window.onload = function() {
+				var ctx = document.getElementById("canvas").getContext("2d");
+				var img = document.getElementById("tree");
+				var pat = ctx.createPattern(img, "no-repeat");
+				
+				ctx.rect(0, 0, 1200, 1000);
+				ctx.fillStyle = pat;
+				ctx.fill();
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>File 2</title>
+		
+		<style type="text/css">
+			canvas {
+				border: 2px solid #818181;
+				padding: .15em;
+				margin: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas width="600" height="250" id="canvas">
+			Your browser doesn't support the canvas tag
+		</canvas>
+		<script>
+			var one = document.getElementById('canvas').getContext('2d');
+		
+			var gradient = one.createLinearGradient(100, 170, 500, 100);
+			gradient.addColorStop('0', '#FF99C8');
+			gradient.addColorStop('0.25', '#FCF6BD');
+			gradient.addColorStop('0.5', '#D0F4DE');
+			gradient.addColorStop('0.75', '#A9DEF9');
+			gradient.addColorStop('0.1', '#E4C1F9');
+			
+			one.fillStyle = gradient;
+			one.fillRect(100, 100, 300, 100);
+			
+		</script>
+	</body>
+</html>

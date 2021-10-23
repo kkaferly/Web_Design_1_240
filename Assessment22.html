@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Assessment 22</title>
+		
+		<style type="text/css">
+			canvas {
+				border: 2px solid #818181;
+				padding: .15em;
+				margin: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+        <canvas width="650" height="250" id="canvas1">
+			Your browser doesn't support the canvas tag
+		</canvas>
+        <canvas width="650" height="250" id="canvas2">
+			Your browser doesn't support the canvas tag
+		</canvas>
+
+        <script>
+            //Canvas 1
+            var ctx = document.getElementById('canvas1').getContext('2d');
+
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 3;
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(75, 75, 40, 0, Math.PI*2);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+
+
+            ctx.scale(1.3, 1.3);
+            ctx.transform(1, 0, 0, 1, 150, 0);
+            ctx.beginPath();
+            ctx.arc(75, 75, 50, 0, Math.PI*2);
+            ctx.stroke();
+            ctx.closePath();
+            ctx.restore();
+
+            ctx.scale(1.2, 1.5);
+            ctx.transform(1, 0, 0, 1, 150, 0);
+            ctx.beginPath();
+            ctx.arc(75, 75, 50, 0, Math.PI*2);
+            ctx.stroke();
+            ctx.closePath();
+
+
+            //Canvas 2
+            var ctx1 = document.getElementById('canvas2').getContext('2d');
+            
+            ctx1.fillStyle = "#ABCDEF";
+
+            ctx1.save();
+            ctx1.beginPath();
+            ctx1.moveTo(125,75);
+            ctx1.lineTo(10,175);
+            ctx1.lineTo(10,75);
+            ctx1.fill();
+            ctx1.restore();
+
+            
+            ctx1.translate(150, 50);
+            ctx.transform(1, 0, 0, 1, 150, 0);
+            ctx1.beginPath();
+            ctx1.moveTo(125,75);
+            ctx1.lineTo(10,175);
+            ctx1.lineTo(10,75);
+            ctx1.fill();
+            ctx1.restore();
+
+            ctx1.translate(150, 20);
+            ctx.transform(1, 0, 0, 1, 150, 0);
+            ctx1.beginPath();
+            ctx1.moveTo(125,75);
+            ctx1.lineTo(10,175);
+            ctx1.lineTo(10,75);
+            ctx1.fill();
+
+        </script>
+    </body>
+</html>

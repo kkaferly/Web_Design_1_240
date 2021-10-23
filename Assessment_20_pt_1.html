@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>File 1</title>
+		
+		<style type="text/css">
+			canvas {
+				border: 2px solid #FFF176;
+				padding: .15em;
+				margin: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas width="600" height="250" id="canvas">
+			Your browser doesn't support the canvas tag
+		</canvas>
+		<script>
+			var one = document.getElementById('canvas').getContext('2d');
+		
+			//Rectangle 1
+			one.strokeStyle = '#EC407A';
+			one.lineJoin = 'bevel';
+			one.lineWidth = 10;
+			one.strokeRect(10, 10, 100, 100);
+			
+			//Rectangle 2
+			one.strokeStyle = '#7E57C2';
+			one.lineJoin = 'round';
+			one.lineWidth = 15;
+			one.strokeRect(110, 110, 100, 100);
+			
+			//Rectangle 3
+			one.fillStyle = '#3F51B5';
+			one.fillRect(216, 10, 100, 150);
+			
+			//Rectangle 4
+			one.fillStyle = '#26C6DA';
+			one.fillRect(316, 160, 100, 50);
+			
+			//Rectangle 5
+			one.strokeStyle = '#009688';
+			one.lineJoin = 'miter';
+			one.lineWidth = 5;
+			one.strokeRect(416, 50, 100, 110);
+			
+		</script>
+	</body>
+</html>
